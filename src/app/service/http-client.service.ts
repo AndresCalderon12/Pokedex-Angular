@@ -14,10 +14,10 @@ export class HttpClientService {
      }
 
      getPokemonList(){
-    return this.httpClient.get<PokemonList[]>('https://stark-hamlet-96865.herokuapp.com/pokemon/list?initial='+20+'&'+'last='+20);
+    return this.httpClient.get<PokemonList[]>('https://pokemon-api-back-spring-boot.herokuapp.com/pokemon/list?initial='+20+'&'+'last='+20);
   }
   getPokemonByName(name:String){
-    return this.httpClient.get<Pokemon>('https://stark-hamlet-96865.herokuapp.com/pokemon/pokemonbyname?name='+name);
+    return this.httpClient.get<Pokemon>('https://pokemon-api-back-spring-boot.herokuapp.com/pokemon/pokemonbyname?name='+name);
 
   }
 }
