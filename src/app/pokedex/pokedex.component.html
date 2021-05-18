@@ -16,23 +16,23 @@
             <div class="book-desc-container row">
                 <p style="margin-left: 20px"><strong> Types:</strong></p>
                 <div *ngFor="let type of pokemon.types;let i=index">
-                    <p style="margin-left: 10px"><strong> {{type}}</strong></p>
+                    <p style="margin-left: 10px">{{type}}</p>
                 </div>
             </div>
-            <p style="margin-left: 5px"><strong> weight: {{pokemon.weight}}</strong></p>
+            <p style="margin-left: 5px"><strong> weight:</strong> {{pokemon.weight}}</p>
             <p style="margin-left: 5px"><strong> abilities:</strong></p>
             <div *ngFor="let abilities of pokemon.abilities;let i=index">
-                <p style="margin-left: 20px"><strong> {{abilities}}</strong></p>
+                <p style="margin-left: 20px"> {{abilities}}</p>
             </div>
             
             <p style="margin-left: 5px"><strong> evolutions:</strong></p>
             <div *ngFor="let evolutions of pokemon.evolutions;let i=index">
-                <p style="margin-left: 20px"><strong> {{evolutions}}</strong></p>
+                <p style="margin-left: 20px"> {{evolutions}}</p>
             </div>
         </div>
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-success" (click)="modal.close()">Ok!</button>
+        <button type="button" class="btn btn-success" (click)="modal.close()">Cerrar</button>
     </div>
     </ng-template>
 
@@ -52,13 +52,13 @@
             <div class="book-desc-container row">
                 <p style="margin-left: 20px"><strong> Types:</strong></p>
                 <div *ngFor="let type of pokemon.types;let i=index">
-                    <p style="margin-left: 10px"><strong> {{type}}</strong></p>
+                    <p style="margin-left: 10px"> {{type}}</p>
                 </div>
             </div>
-            <p style="margin-left: 5px"><strong> weight: {{pokemon.weight}}</strong></p>
+            <p style="margin-left: 5px"><strong> weight: </strong>{{pokemon.weight}}</p>
             <p style="margin-left: 5px"><strong> abilities:</strong></p>
             <div *ngFor="let abilities of pokemon.abilities;let i=index">
-                <p style="margin-left: 20px"><strong> {{abilities}}</strong></p>
+                <p style="margin-left: 20px"> {{abilities}}</p>
             </div>
 
         </div>
