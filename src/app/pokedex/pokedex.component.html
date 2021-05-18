@@ -41,7 +41,7 @@
 
 <button  style="margin-top: 10px;" type="button" class="btn btn-success" (click)="changeList(1)" routerLink="/pokedex">Previous</button> <button style="margin-left: 30px;margin-top: 10px;" type="button" class="btn btn-success" (click)="changeList(2)" routerLink="/pokedex">Next</button>
 <div class="container row">
-    <div class="col-md-4" style="margin-top:50px ;" *ngFor="let pokemon of pokemonList;let i=index">
+    <div class="col-md-4" style="margin-top:50px ;" *ngFor="let pokemon of pokemonList;let i=index paginate: { itemsPerPage: 5, currentPage: page } ">
         <div class="card card-block">
 
             <button><img  img src="{{pokemon.photo}}" height="250" width="250" style="margin-left: 40px;
@@ -64,4 +64,5 @@
 
         </div>
     </div>
+    <pagination-controls (pageChange)=»page = $event» previousLabel=»Anterior» nextLabel=»Siguiente»></pagination-controls></pagination-controls>
 </div>
