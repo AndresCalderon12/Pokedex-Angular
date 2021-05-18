@@ -55,11 +55,20 @@ export class PokedexComponent implements OnInit {
     }
 
     changeList(operation:number){
+      if (operation===1 && this.initial>10)  {
+        this.initial=this.initial-10;
+        this.last=this.last-100
+        this.ngOnInit();
+        console.log("Prueba"+this.initial);
+    } 
       if (operation===2) {
         this.initial=this.initial+10;
+        this.last=this.last+10
         this.ngOnInit();
         console.log("Prueba"+this.initial);
     }
+   
+    
   
 
   }
