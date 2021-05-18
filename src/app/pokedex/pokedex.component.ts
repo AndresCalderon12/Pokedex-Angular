@@ -60,7 +60,7 @@ export class PokedexComponent implements OnInit {
         this.last=this.last+10;
         this.ngOnInit();
       }else{
-        if (this.initial!=10) {
+        if (this.initial>10) {
           this.initial-10;
           this.last-10;
           this.ngOnInit();
