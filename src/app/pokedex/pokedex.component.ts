@@ -11,7 +11,8 @@ import { Pokemon } from '../model/Pokemon';
   styleUrls: ['./pokedex.component.css']
 })
 export class PokedexComponent implements OnInit {
-
+  initial:number=10;
+  last:number=10;
   pokemonList: Array<PokemonList> = [];
   pokemonTypes:Array<String>=[];
   pokemon: Pokemon = new Pokemon();
@@ -20,7 +21,7 @@ export class PokedexComponent implements OnInit {
   constructor(private router: Router, private httpClientService: HttpClientService,public modal:NgbModal) { }
 
   ngOnInit() {
-    this.httpClientService.getPokemonList().subscribe(
+    this.httpClientService.getPokemonList(this.initial,this.last).subscribe(
       response => this.handleSuccessfulResponse(response),
     );
   }
@@ -51,6 +52,14 @@ export class PokedexComponent implements OnInit {
   handleSuccessfulResponseByName(response: Pokemon) {
    
     this.pokemon = response;
+    }
+
+    changeList(operation:number){
+      if (operation===2) {
+        this.initial=this.initial+10;
+        this.last=this.last+10;
+        this.ngOnInit();
+      }
     }
      
 }

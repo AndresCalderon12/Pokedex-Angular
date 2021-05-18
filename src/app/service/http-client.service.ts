@@ -13,8 +13,8 @@ export class HttpClientService {
   ) { 
      }
 
-     getPokemonList(){
-    return this.httpClient.get<PokemonList[]>('https://pokemon-api-back-spring-boot.herokuapp.com/pokemon/list?initial='+20+'&'+'last='+20);
+     getPokemonList(initial:number,last:number){
+    return this.httpClient.get<PokemonList[]>('https://pokemon-api-back-spring-boot.herokuapp.com/pokemon/list?initial='+initial+'&'+'last='+last);
   }
   getPokemonByName(name:String){
     return this.httpClient.get<Pokemon>('https://pokemon-api-back-spring-boot.herokuapp.com/pokemon/pokemonbyname?name='+name);
