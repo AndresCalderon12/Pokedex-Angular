@@ -8,7 +8,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { PokedexComponent } from './pokedex/pokedex.component';
 import { ModalComponent } from './modal/modal.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -21,8 +20,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule,
-    NgxPaginationModule
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -13,7 +13,6 @@ import { Pokemon } from '../model/Pokemon';
 export class PokedexComponent implements OnInit {
   initial:number=10;
   last:number=10;
-  page:number=1;
   pokemonList: Array<PokemonList> = [];
   pokemonTypes:Array<String>=[];
   pokemon: Pokemon = new Pokemon();
@@ -59,14 +58,10 @@ export class PokedexComponent implements OnInit {
       if (operation===1 && this.initial>10)  {
         this.initial=this.initial-10;
         this.ngOnInit();
-        this.router.navigateByUrl('/RefrshComponent', {skipLocationChange: true}).then(()=>
-      this.router.navigate(["Your actualComponent"])); 
-        console.log("Prueba"+this.initial);
     } 
       if (operation===2) {
         this.initial=this.initial+10;
         this.ngOnInit();
-        console.log("Prueba"+this.initial);
     }
    
     
